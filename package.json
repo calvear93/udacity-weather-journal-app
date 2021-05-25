@@ -1,0 +1,32 @@
+{
+  "name": "udacity-weather-journal-app",
+  "version": "1.0.0",
+  "author": "Alvear Candia, Cristopher Alejandro <calvear93@gmail.com>",
+  "description": "Udacity's third project for Frontend Web Developer Nanodegree.",
+  "homepage": "https://github.com/calvear93/udacity-weather-journal-app#readme",
+  "license": "MIT",
+  "main": "src/api/server.js",
+  "scripts": {
+    "start": "node -r esm api/server.js",
+    "start:debug": "nodemon -r esm api/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/calvear93/udacity-weather-journal-app.git"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "esm": "^3.2.25",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "eslint": "^7.27.0",
+    "eslint-plugin-import": "^2.23.3",
+    "nodemon": "^2.0.7",
+    "prettier-stylelint": "^0.4.2",
+    "stylelint": "^13.13.0",
+    "stylelint-config-rational-order": "^0.1.2",
+    "stylelint-order": "^4.1.0"
+  }
+}
