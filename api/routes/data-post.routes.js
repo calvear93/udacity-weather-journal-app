@@ -1,9 +1,17 @@
-function exec(request, response)
+import { store } from '../store';
+
+// adds a temperature and feelings by date
+function exec({ body }, response)
 {
-    response.send('Hello Post!');
+    store.set(body.date, {
+        temperature: body.temperature,
+        feelings: body.feelings
+    });
+
+    response.send();
 }
 
-// export route
+// exports route
 export default {
     path: '/create',
     method: 'post',

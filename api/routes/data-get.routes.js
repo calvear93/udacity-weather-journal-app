@@ -1,11 +1,14 @@
-function exec(request, response)
+import { store } from '../store';
+
+// retrieves temperature and feelings by date
+function exec({ query: { date } }, response)
 {
-    response.send('Hello World!');
+    response.send(store.get(date));
 }
 
-// export route
+// exports route
 export default {
-    path: '/all',
+    path: '/temp',
     method: 'get',
     exec
 };
