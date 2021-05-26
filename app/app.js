@@ -8,7 +8,8 @@ const env = {
     countryCode: 'US',
     localApi: 'http://localhost:3000',
     localApiGet: 'temp',
-    localApiPost: 'create'
+    localApiPost: 'create',
+    units: 'imperial'
 };
 
 // input values
@@ -28,7 +29,7 @@ async function requestWeatherForZipCode(zipCodeInput)
 {
     try
     {
-        const response = await fetch(`${env.apiUrl}?appid=${env.openWeatherApiKey}&zip=${zipCodeInput},${env.countryCode}`);
+        const response = await fetch(`${env.apiUrl}?appid=${env.openWeatherApiKey}&zip=${zipCodeInput},${env.countryCode}&units=${env.units}`);
 
         const { main: { temp } } = await response.json();
 
